@@ -63,7 +63,7 @@ Result: (83+117)/2=100.
 Doesn’t match any data line.  
 Result: “-”.
 
-#Instruction: 
+# Instruction: 
 
 In order to start the application clone it to the PC, from the Intelij Idea run main method which is placed in Main class.  
 Result of the execution you will see in console and output.txt file , which is placed in resource folder.  
