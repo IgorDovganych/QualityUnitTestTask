@@ -7,7 +7,17 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * main logic is here
+ */
 public class Analyser {
+
+    /**
+     * finds matching time lines
+     *
+     * @param list - list of Strings
+     * @return needed time lines
+     */
     public static List<String> findWaitingTimelines(List<String> list) {
         List<WaitingTimeline> waitingTimelines = new ArrayList<>();
         List<String> record;
@@ -70,14 +80,11 @@ public class Analyser {
                             }
                         }
                     }
-
                     //when service = "*" and question != "*"
                     if (serviceString.get(0).equals("*") && !questionString.get(0).equals("*")) {
-
                         byte questionWTL = waitingTimeline.getQuestion();
                         byte categoryWTL = waitingTimeline.getCategory();
                         byte subcategoryWTL = waitingTimeline.getSubcategory();
-
                         if (endDate == null) {
                             if ((startDate.compareTo(date) == 0 && responseType == responseTypeWTL) &&
                                     ((question == questionWTL && category == categoryWTL && subcategory == subcategoryWTL) ||
@@ -97,7 +104,6 @@ public class Analyser {
                             }
                         }
                     }
-
                     //when service != "*" and question = "*"
                     if (!serviceString.get(0).equals("*") && questionString.get(0).equals("*")) {
                         byte serviceWTL = waitingTimeline.getService();
@@ -150,24 +156,26 @@ public class Analyser {
                             }
                         }
                     }
-
                 }
                 if (quantity != 0) {
                     int time = sum / quantity;
                     String waitingTime = String.valueOf(time);
                     times.add(waitingTime);
-                }else {
+                } else {
                     times.add("-");
                 }
-
-
             }
         }
-
         return times;
     }
 
-    private static WaitingTimeline waitingTimelineBuilder(List<String> record){
+    /**
+     * parse a String and builds new WaitingTimeline object
+     *
+     * @param record - list of Strings
+     * @return WaitingTimeline object
+     */
+    private static WaitingTimeline waitingTimelineBuilder(List<String> record) {
         List<String> serviceString = Arrays.stream(record.get(1).split("\\.")).collect(toList());
         byte service = Byte.parseByte(serviceString.get(0));
         byte variation = serviceString.size() == 2 ? Byte.parseByte(serviceString.get(1)) : 0;

@@ -1,15 +1,15 @@
 # QualityUnitTestTask
 
-The Problem
-Webhosting company provides customer support via email. They record reply waiting time,
-type of question, category, and service. To improve customer satisfaction, they need an
+The Problem  
+Webhosting company provides customer support via email. They record reply waiting time, 
+type of question, category, and service. To improve customer satisfaction, they need an 
 analytical tool to evaluate these data.
 
-Input
-The company provides 10 different services, each with 3 variations. Questions are divided into
-10 types, each can belong to 20 categories, a category can have 5 subcategories.
-First line contains count S (<= 100.000) of all lines.
-Every line starts with character C (waiting timeline) or D (query).
+Input  
+The company provides 10 different services, each with 3 variations. Questions are divided into  
+10 types, each can belong to 20 categories, a category can have 5 subcategories.  
+First line contains count S (<= 100.000) of all lines.  
+Every line starts with character C (waiting timeline) or D (query).  
 Waiting timeline:  
 C service_id[.variation_id] question_type_id[.category_id.[sub-category_id]] P/N date time  
 Values in square brackets are optional.  

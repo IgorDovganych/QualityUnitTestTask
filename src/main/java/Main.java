@@ -1,14 +1,14 @@
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
+
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
 
 public class Main {
+
+    /**
+     * main method
+     * result of the execution you can see in output.txt into resource folder
+     */
     public static void main(String[] args) {
         List<String> list = FileProcessor.readFile("src/main/resources/input.txt");
         show(list);
@@ -17,10 +17,14 @@ public class Main {
         FileProcessor.writeToFile("src/main/resources/output.txt", waitingTimes);
     }
 
-
+    /**
+     * prints elements of list
+     * @param list
+     */
     private static void show(List<String> list) {
         for (String str : list) {
             System.out.println(str);
         }
+        System.out.println("==============================");
     }
 }

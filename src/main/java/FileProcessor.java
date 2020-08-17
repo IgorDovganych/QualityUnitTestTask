@@ -2,6 +2,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * class helper, needed for operations with file
+ */
 public class FileProcessor {
 
     /**
