@@ -45,7 +45,9 @@ D 3 10 P 01.12.2012
 Output:  
 83  
 100  
--  
+-
+
+  
 Explanation:  
 1.query ( D 1.1 8 P 01.01.2012-01.12.2012 ) at line 5:  
 Valid only for 1.data line, because others have different question type.  
@@ -60,3 +62,9 @@ Result: (83+117)/2=100.
 3.query ( D 3 10 P 01.12.2012 ) at line 8:  
 Doesn’t match any data line.  
 Result: “-”.
+
+#Instruction: 
+
+In order to start the application clone it to the PC, from the Intelij Idea run main method which is placed in Main class.  
+Result of the execution you will see in console and output.txt file , which is placed in resource folder.  
+You can change input data in input.txt file.  
